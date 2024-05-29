@@ -1,21 +1,9 @@
-using JuMP
-
-function get_model_output(model, data)
+function get_output(model, data)
     @assert "df_forest" in keys(data)
     @assert "df_vars" in keys(data)
 
     ### Initialize
     output = Dict()
-
-    ### Get output from gurobi report
-    # output[:num_constrs] = MOI.get(model, Gurobi.ModelAttribute("NumConstrs"))
-    # output[:num_vars] = MOI.get(model, Gurobi.ModelAttribute("NumVars"))
-    # output[:num_binary] = get_num_binary_variables(model)
-    # output[:time_solve] = JuMP.solve_time(model)
-    # output[:num_call] = num_call
-    # output[:num_lazy] = num_lazy
-    # output[:num_user] = num_user
-    # output[:time_cb] = time_cb
 
     num_constr = 0
     for constr_type in JuMP.list_of_constraint_types(model)
@@ -42,7 +30,6 @@ function get_model_output(model, data)
         end
 
         df_sol.sol = JuMP.value.(JuMP.all_variables(model))
-        # df_sol.sol = convert(Array{Int}, round.(JuMP.value.(JuMP.all_variables(model))))
         output[:check_feasibility] = check_feasibility(data["df_forest"], df_sol)
     else
         output[:objval] = missing
