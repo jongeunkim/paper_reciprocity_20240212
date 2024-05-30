@@ -8,7 +8,6 @@ include("src/get_output.jl")
 const MOI = MathOptInterface
 const GRB_ENV = Gurobi.Env()
 
-
 function open_global_logger(logfile)
     ##### Open a logger
     io = open(logfile, "w+")
@@ -42,11 +41,10 @@ function main()
     result_dir = "result/"
     dataset_dir = "dataset/concrete_bt/" # "concrete_bt", "concrete_rf", "redwine_bt", "redwine_rf"
     num_trees = 10
+    formulation = "TEOR" # "TEOM", "TEOR", "TEOC"
     is_LP = false
     time_limit_sec = 300
-    for formulation in ["TEOM", "TEOR", "TEOC"]
-        solve_single_instance(result_dir * formulation * "/", dataset_dir, num_trees, formulation, is_LP, time_limit_sec)
-    end
+    solve_single_instance(result_dir, dataset_dir, num_trees, formulation, is_LP, time_limit_sec)
 end
 
 main()

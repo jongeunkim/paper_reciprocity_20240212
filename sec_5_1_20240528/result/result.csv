@@ -2,13 +2,13 @@ first,second
 num_vars,292
 MIPNodes,0
 num_trees,10
-num_constrs,1182
+num_constrs,1130
 ObjBound,60.30110116504851
 dataset,dataset/concrete_bt/
 time_limit_sec,300
 objval,60.30110116504851
 check_feasibility,true
 num_binary,122
-time_solve,0.008867979049682617
+time_solve,0.006503105163574219
 MIPGap,0.0
-formulation,TEOC
+formulation,TEOR

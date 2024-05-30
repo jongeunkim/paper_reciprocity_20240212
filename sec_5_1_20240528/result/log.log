@@ -8,11 +8,15 @@
 └ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:304
 ┌ Info: Skip data[ptr_forest] from saving
 └ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:304
-┌ Info: read_data() (duration: 10.19 sec)
+┌ Info: read_data() (duration: 7.87 sec)
 └ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:320
+┌ Info: get_df_splitconstr(method=liftx)
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:284
 ┌ Info: get_df_splitconstr(method=misic)
 └ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:284
-┌ Info: get_df_splitconstr(misic):: 0.6765050888061523 seconds
+┌ Info: get_df_splitconstr(misic):: 0.6002380847930908 seconds
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:443
+┌ Info: get_df_splitconstr(liftx):: 2.2643330097198486 seconds
 └ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:443
 ┌ Info: lazylevel = 2
 └ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:479
