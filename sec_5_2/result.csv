@@ -1,0 +1,15 @@
+first,second
+T,5
+C,2
+objval_LP,251.52466307723265
+D,5
+mipgap,0.0
+bnbcnt,79
+timelimit,300
+M,5
+objval,291.7727349704327
+N,2
+runtime,2.0945050716400146
+seed,1
+formulation,TEOM
+objbnd,291.7727349704323

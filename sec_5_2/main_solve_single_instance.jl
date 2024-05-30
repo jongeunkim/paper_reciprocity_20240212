@@ -15,8 +15,7 @@ function main()
     ##### Write
     instance_info = Dict("M"=>M, "N"=>N, "C"=>C, "D"=>D, "T"=>T, "seed"=>random_seed, "formulation"=>formulation, "timelimit"=>timelimit_sec)
     merge!(output, instance_info)
-    df_output = DF.DataFrame(output)
-    CSV.write(outfile, df_output)
+    CSV.write(outfile, output)
 end
 
 main()
