@@ -3,12 +3,12 @@ num_vars,292
 MIPNodes,0
 num_trees,10
 num_constrs,1182
-ObjBound,2.448314
-method,liftall
+ObjBound,60.30110116504851
 dataset,dataset/concrete_bt/
 time_limit_sec,300
-objval,2.448314
+objval,60.30110116504851
 check_feasibility,true
 num_binary,122
-time_solve,0.009251117706298828
+time_solve,0.008867979049682617
 MIPGap,0.0
+formulation,TEOC

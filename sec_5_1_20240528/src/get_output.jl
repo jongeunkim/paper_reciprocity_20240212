@@ -1,3 +1,46 @@
+function check_feasibility(df_forest, df_sol)
+    df_sol = filter(row -> row.vartype in ["x", "y"], df_sol)
+    num_trees = maximum(df_forest.treeid)
+
+    ### Binary check
+    EPS = 0.01
+    df_nonbinary = filter(row -> row.sol > EPS && row.sol < 1-EPS, df_sol)
+    if !isempty(df_nonbinary)
+        return false
+    end
+
+    ### Compute sol by y 
+    df_sol_y = filter(row -> row.vartype == "y", df_sol)
+    obj_y = sum([row.pred * row.sol for row in eachrow(df_sol_y)])
+
+    ### Compute sol by x 
+    obj_x = 0
+    for t = 1:num_trees
+        df_tree = df_forest[df_forest.treeid .== t, :]
+
+        n = 1
+        while n > 0
+            if df_tree.lchild[n] == 0
+                break
+            end
+
+            if df_sol[df_tree.varindex[n], "sol"] > 1-EPS
+                n = df_tree.lchild[n]
+            else
+                n = df_tree.rchild[n]
+            end
+        end
+
+        obj_x += df_tree.pred[n]
+    end
+
+    if abs(obj_y - obj_x) / abs(obj_y) > 1e-04
+        return false
+    else
+        return true
+    end
+end
+
 function get_output(model, data)
     @assert "df_forest" in keys(data)
     @assert "df_vars" in keys(data)

@@ -1,0 +1,22 @@
+┌ Info: Get df_forest (updated), df_splits, df_leaves, df_vars in data
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:313
+┌ Info: Skip data[df_splits] from saving
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:304
+┌ Info: Skip data[df_leaves] from saving
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:304
+┌ Info: Skip data[df_vars] from saving
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:304
+┌ Info: Skip data[ptr_forest] from saving
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:304
+┌ Info: read_data() (duration: 0.01 sec)
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/read_data.jl:320
+┌ Info: get_df_splitconstr(method=liftx)
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:284
+┌ Info: get_df_splitconstr(method=misic)
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:284
+┌ Info: get_df_splitconstr(misic):: 0.006067991256713867 seconds
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:443
+┌ Info: get_df_splitconstr(liftx):: 1.9857118129730225 seconds
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:443
+┌ Info: lazylevel = 2
+└ @ Main /home/jongeun/development/paper_reciprocity_codes/sec_5_1_20240528/src/get_model.jl:479
