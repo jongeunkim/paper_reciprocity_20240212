@@ -16,7 +16,7 @@ function open_global_logger(logfile)
     return io
 end
 
-function solve_single_instance(dataset_dir, num_trees, formulation, is_LP, time_limit_sec)
+function solve_single_instance(dataset_dir, num_trees, formulation, time_limit_sec)
     io = open_global_logger("log.log")
 
     # Set Parameters
@@ -47,7 +47,6 @@ end
 function main()
     dataset_dir = "dataset/concrete_bt/" # "concrete_bt", "concrete_rf", "redwine_bt", "redwine_rf"
     num_trees = 10
-    is_LP = false
     time_limit_sec = 300
     for formulation in ["TEOM", "TEOR", "TEOC"]
         solve_single_instance(dataset_dir, num_trees, formulation, is_LP, time_limit_sec)

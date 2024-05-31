@@ -5,7 +5,6 @@ function main()
     M, N = 5, 2
     C, D, T = 2, 5, 1
     random_seed = 1 # 1 to 10
-    formulation = "TEOM" # "TEOM", "TEOR", "TEOC", "DCC", "DLog", "MC"
     result_file = "result.csv"
     timelimit_sec = 300
 
