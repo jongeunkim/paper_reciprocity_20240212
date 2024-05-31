@@ -56,9 +56,9 @@ function get_output(model, data)
     output[:num_vars] = JuMP.num_variables(model)
     output[:num_binary] = length([v for v in JuMP.all_variables(model) if JuMP.is_binary(v)])
     output[:time_solve] = JuMP.solve_time(model)
-    output[:MIPGap] = JuMP.relative_gap(model)
-    output[:ObjBound] = JuMP.objective_bound(model)        
-    output[:MIPNodes] = JuMP.node_count(model)
+    output[:mipgap] = JuMP.relative_gap(model)
+    output[:objbound] = JuMP.objective_bound(model)        
+    output[:nodecnt] = JuMP.node_count(model)
 
     ### Get output from solution
     df_sol = data["df_vars"]
